@@ -22,6 +22,124 @@ body {
   box-sizing: border-box;
 }
 
+.hv-grid-list {
+  font-size: 0;
+  overflow: hidden;
+}
+.hv-grid-list .hv-item {
+  padding: 20px;
+  display: inline-block;
+}
+.hv-grid-list .hv-item.hv-hover-1 .title {
+  -moz-transform: translate(0, -50px);
+  -ms-transform: translate(0, -50px);
+  -webkit-transform: translate(0, -50px);
+  transform: translate(0, -50px);
+}
+.hv-grid-list .hv-item.hv-hover-1 .icons {
+  -moz-transform: translate(0, 50px);
+  -ms-transform: translate(0, 50px);
+  -webkit-transform: translate(0, 50px);
+  transform: translate(0, 50px);
+}
+.hv-grid-list .hv-item.hv-hover-1:hover .icons {
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.hv-grid-list .hv-item.hv-hover-1:hover .title {
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.hv-grid-list .hv-item .hv-item-inner {
+  position: relative;
+  overflow: hidden;
+}
+.hv-grid-list .hv-item .hv-item-inner:hover .hv-icons {
+  opacity: 1;
+}
+.hv-grid-list .hv-item .hv-item-inner:hover .hv-title {
+  opacity: 1;
+}
+.hv-grid-list .hv-item .hv-item-inner:hover .hv-overlay {
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+.hv-grid-list .hv-item .hv-title {
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  color: #fff;
+  top: 0;
+  left: 0;
+  margin: 20px 15px;
+  font-size: 25px;
+  opacity: 0;
+  z-index: 10;
+}
+.hv-grid-list .hv-item .hv-content {
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  z-index: 10;
+}
+.hv-grid-list .hv-item .hv-img-wrap {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+.hv-grid-list .hv-item .hv-icons {
+  position: absolute;
+  color: #fff;
+  bottom: 0;
+  left: 0;
+  margin: 15px 15px;
+  font-size: 25px;
+  opacity: 0;
+  font-size: 12px;
+  color: #fff;
+  z-index: 10;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.hv-grid-list .hv-item .hv-icons span {
+  margin: 0 10px 0 0;
+}
+.hv-grid-list .hv-item .hv-icons i {
+  font-size: 16px;
+  margin: 0 4px 0 0;
+}
+.hv-grid-list .hv-item .hv-overlay {
+  z-index: 3;
+}
+
+.hv-overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
 .credits {
   position: fixed;
   left: 0;
@@ -36,111 +154,4 @@ body {
   font-size: 13px;
   text-decoration: none;
   text-transform: uppercase;
-}
-
-.grid-list {
-  font-size: 0;
-  overflow: hidden;
-}
-.grid-list .item {
-  padding: 20px;
-  display: inline-block;
-}
-.grid-list .item.hover-1 .title {
-  -moz-transform: translate(0, -50px);
-  -ms-transform: translate(0, -50px);
-  -webkit-transform: translate(0, -50px);
-  transform: translate(0, -50px);
-}
-.grid-list .item.hover-1 .icons {
-  -moz-transform: translate(0, 50px);
-  -ms-transform: translate(0, 50px);
-  -webkit-transform: translate(0, 50px);
-  transform: translate(0, 50px);
-}
-.grid-list .item.hover-1:hover .icons {
-  -moz-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
-.grid-list .item.hover-1:hover .title {
-  -moz-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
-.grid-list .item .item-inner {
-  position: relative;
-  overflow: hidden;
-}
-.grid-list .item .item-inner:hover .icons {
-  opacity: 1;
-}
-.grid-list .item .item-inner:hover .title {
-  opacity: 1;
-}
-.grid-list .item .item-inner:hover .overlay {
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  opacity: 1;
-  visibility: visible;
-}
-.grid-list .item .title {
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  position: absolute;
-  color: #fff;
-  top: 0;
-  left: 0;
-  margin: 20px 15px;
-  font-size: 25px;
-  opacity: 0;
-}
-.grid-list .item .content {
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-.grid-list .item .icons {
-  position: absolute;
-  color: #fff;
-  bottom: 0;
-  left: 0;
-  margin: 15px 15px;
-  font-size: 25px;
-  opacity: 0;
-  font-size: 12px;
-  color: #fff;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-}
-.grid-list .item .icons span {
-  margin: 0 10px 0 0;
-}
-.grid-list .item .icons i {
-  font-size: 16px;
-  margin: 0 4px 0 0;
-}
-
-.overlay {
-  position: absolute;
-  left: 0;
-  right: 0;
-  top: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0.6);
-  opacity: 0;
-  visibility: hidden;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
