@@ -1,0 +1,146 @@
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500);
+@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+html,
+body {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+* {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+*:after, *:before {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.credits {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 2px 15px;
+  background-color: #333;
+  width: 100%;
+  z-index: 3;
+}
+.credits a {
+  color: #fff;
+  font-size: 13px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.grid-list {
+  font-size: 0;
+  overflow: hidden;
+}
+.grid-list .item {
+  padding: 20px;
+  display: inline-block;
+}
+.grid-list .item.hover-1 .title {
+  -moz-transform: translate(0, -50px);
+  -ms-transform: translate(0, -50px);
+  -webkit-transform: translate(0, -50px);
+  transform: translate(0, -50px);
+}
+.grid-list .item.hover-1 .icons {
+  -moz-transform: translate(0, 50px);
+  -ms-transform: translate(0, 50px);
+  -webkit-transform: translate(0, 50px);
+  transform: translate(0, 50px);
+}
+.grid-list .item.hover-1:hover .icons {
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.grid-list .item.hover-1:hover .title {
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+}
+.grid-list .item .item-inner {
+  position: relative;
+  overflow: hidden;
+}
+.grid-list .item .item-inner:hover .icons {
+  opacity: 1;
+}
+.grid-list .item .item-inner:hover .title {
+  opacity: 1;
+}
+.grid-list .item .item-inner:hover .overlay {
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+.grid-list .item .title {
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  position: absolute;
+  color: #fff;
+  top: 0;
+  left: 0;
+  margin: 20px 15px;
+  font-size: 25px;
+  opacity: 0;
+}
+.grid-list .item .content {
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.grid-list .item .icons {
+  position: absolute;
+  color: #fff;
+  bottom: 0;
+  left: 0;
+  margin: 15px 15px;
+  font-size: 25px;
+  opacity: 0;
+  font-size: 12px;
+  color: #fff;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+.grid-list .item .icons span {
+  margin: 0 10px 0 0;
+}
+.grid-list .item .icons i {
+  font-size: 16px;
+  margin: 0 4px 0 0;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.6);
+  opacity: 0;
+  visibility: hidden;
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}

@@ -1,0 +1,133 @@
+@import "compass/css3";
+@import url(http://fonts.googleapis.com/css?family=Roboto:300,400,500);
+@import url(http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css);
+
+html,
+body{
+  height: 100%;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  font-family: 'Roboto', sans-serif
+}
+
+$row_count: 6;
+$item_per_row: 18;
+
+* {
+    @include box-sizing(border-box);
+    &:after,
+    &:before {
+        @include box-sizing(border-box);
+    }
+}
+
+
+
+.credits {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  padding: 2px 15px;
+  background-color: #333;
+  width: 100%;
+  z-index: 3;
+  a {
+    color: #fff;
+    font-size: 13px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+.grid-list {
+  font-size: 0;
+  overflow: hidden;
+  .item {
+    padding: 20px;
+    display: inline-block;
+
+    // Hover Styles
+    &.hover-1 {
+      .title {
+        @include transform(translate(0, -50px));
+      }
+      .icons {
+        @include transform(translate(0, 50px));
+      }
+      &:hover {
+        .icons {
+          @include transform(translate(0, 0));
+        }
+        .title {
+          @include transform(translate(0, 0));
+        }
+      }
+    }
+
+    .item-inner {
+      position: relative;
+      overflow: hidden;
+      &:hover {
+        .icons {
+          opacity: 1;
+        }
+        .title {
+          opacity: 1;
+        }
+        .overlay {
+          @include transition(all 0.3s ease-in-out);
+          opacity: 1;
+          visibility: visible;
+        }
+      }
+    }
+    .title {
+      @include transition(all 0.3s ease-in-out);
+      position: absolute;
+      color: #fff;
+      top: 0;
+      left: 0;
+      margin: 20px 15px;
+      font-size: 25px;
+      opacity: 0;
+    }
+    .content {
+      @include transition(all 0.3s ease-in-out);
+    }
+    .icons {
+      position: absolute;
+      color: #fff;
+      bottom: 0;
+      left: 0;
+      margin: 15px 15px;
+      font-size: 25px;
+      opacity: 0;
+      font-size: 12px;
+      color: #fff;
+      @include transition(all 0.3s ease-in-out);
+      span {
+        margin: 0 10px 0 0;
+      }
+      i {
+        font-size: 16px;
+        margin: 0 4px 0 0;
+      }
+    }
+  }
+}
+
+
+.overlay {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.6);
+  opacity: 0;
+  visibility: hidden;
+  @include transition(all 0.3s ease-in-out);
+}
