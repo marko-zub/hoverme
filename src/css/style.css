@@ -30,49 +30,16 @@ body {
   padding: 20px;
   display: inline-block;
 }
-.hv-grid-list .hv-item.hv-hover-1 .title {
-  -moz-transform: translate(0, -50px);
-  -ms-transform: translate(0, -50px);
-  -webkit-transform: translate(0, -50px);
-  transform: translate(0, -50px);
+
+.hv-item {
+  padding: 20px;
+  display: inline-block;
 }
-.hv-grid-list .hv-item.hv-hover-1 .icons {
-  -moz-transform: translate(0, 50px);
-  -ms-transform: translate(0, 50px);
-  -webkit-transform: translate(0, 50px);
-  transform: translate(0, 50px);
-}
-.hv-grid-list .hv-item.hv-hover-1:hover .icons {
-  -moz-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
-.hv-grid-list .hv-item.hv-hover-1:hover .title {
-  -moz-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-}
-.hv-grid-list .hv-item .hv-item-inner {
+.hv-item .hv-item-inner {
   position: relative;
   overflow: hidden;
 }
-.hv-grid-list .hv-item .hv-item-inner:hover .hv-icons {
-  opacity: 1;
-}
-.hv-grid-list .hv-item .hv-item-inner:hover .hv-title {
-  opacity: 1;
-}
-.hv-grid-list .hv-item .hv-item-inner:hover .hv-overlay {
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  opacity: 1;
-  visibility: visible;
-}
-.hv-grid-list .hv-item .hv-title {
+.hv-item .hv-title {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
@@ -86,19 +53,19 @@ body {
   opacity: 0;
   z-index: 10;
 }
-.hv-grid-list .hv-item .hv-content {
+.hv-item .hv-content {
   -moz-transition: all 0.3s ease-in-out;
   -o-transition: all 0.3s ease-in-out;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   z-index: 10;
 }
-.hv-grid-list .hv-item .hv-img-wrap {
+.hv-item .hv-img-wrap {
   position: relative;
   overflow: hidden;
   z-index: 1;
 }
-.hv-grid-list .hv-item .hv-icons {
+.hv-item .hv-icons {
   position: absolute;
   color: #fff;
   bottom: 0;
@@ -114,14 +81,14 @@ body {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
-.hv-grid-list .hv-item .hv-icons span {
+.hv-item .hv-icons span {
   margin: 0 10px 0 0;
 }
-.hv-grid-list .hv-item .hv-icons i {
+.hv-item .hv-icons i {
   font-size: 16px;
   margin: 0 4px 0 0;
 }
-.hv-grid-list .hv-item .hv-overlay {
+.hv-item .hv-overlay {
   z-index: 3;
 }
 
@@ -140,18 +107,193 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.credits {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  padding: 2px 15px;
-  background-color: #333;
-  width: 100%;
-  z-index: 3;
+.hv-item.hv-hover-1 .hv-title {
+  -moz-transform: translate(0, -80px);
+  -ms-transform: translate(0, -80px);
+  -webkit-transform: translate(0, -80px);
+  transform: translate(0, -80px);
+  visibility: hidden;
 }
-.credits a {
-  color: #fff;
-  font-size: 13px;
-  text-decoration: none;
-  text-transform: uppercase;
+.hv-item.hv-hover-1 .hv-icons {
+  -moz-transform: translate(0, 80px);
+  -ms-transform: translate(0, 80px);
+  -webkit-transform: translate(0, 80px);
+  transform: translate(0, 80px);
+  visibility: hidden;
+}
+.hv-item.hv-hover-1:hover .hv-icons {
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  visibility: visible;
+  opacity: 1;
+}
+.hv-item.hv-hover-1:hover .hv-title {
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  visibility: visible;
+  opacity: 1;
+}
+.hv-item.hv-hover-1:hover .hv-overlay {
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+
+.hv-item.hv-hover-2 .hv-title {
+  -moz-transform: translate(-80px, 0);
+  -ms-transform: translate(-80px, 0);
+  -webkit-transform: translate(-80px, 0);
+  transform: translate(-80px, 0);
+  visibility: hidden;
+}
+.hv-item.hv-hover-2 .hv-icons {
+  -moz-transform: translate(-80px, 0);
+  -ms-transform: translate(-80px, 0);
+  -webkit-transform: translate(-80px, 0);
+  transform: translate(-80px, 0);
+  visibility: hidden;
+}
+.hv-item.hv-hover-2:hover .hv-icons {
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  visibility: visible;
+  opacity: 1;
+}
+.hv-item.hv-hover-2:hover .hv-title {
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0);
+  visibility: visible;
+  opacity: 1;
+}
+.hv-item.hv-hover-2:hover .hv-overlay {
+  -moz-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  opacity: 1;
+  visibility: visible;
+}
+
+.hv-item .hv-ripple {
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  width: 20px;
+  height: 20px;
+  border-radius: 30px;
+}
+.hv-item:hover .hv-ripple {
+  border-radius: 0;
+  width: 100%;
+  height: 100%;
+}
+.hv-item .hv-scale {
+  width: 0;
+  height: 0;
+  left: 50%;
+  top: 50%;
+  -moz-transform: scale(0);
+  -ms-transform: scale(0);
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  -moz-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+  visibility: hidden;
+}
+.hv-item:hover .hv-scale {
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: 0;
+  visibility: visible;
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+.hv-item .hv-zoom {
+  -moz-transform: scale(1);
+  -ms-transform: scale(1);
+  -webkit-transform: scale(1);
+  transform: scale(1);
+  -moz-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+.hv-item:hover .hv-zoom {
+  -moz-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.hv-item .hv-rotate-img-right {
+  -moz-transform: scale(1) rotate(0deg);
+  -ms-transform: scale(1) rotate(0deg);
+  -webkit-transform: scale(1) rotate(0deg);
+  transform: scale(1) rotate(0deg);
+  -moz-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+.hv-item:hover .hv-rotate-img-right {
+  -moz-transform: scale(1.1) rotate(5deg);
+  -ms-transform: scale(1.1) rotate(5deg);
+  -webkit-transform: scale(1.1) rotate(5deg);
+  transform: scale(1.1) rotate(5deg);
+}
+.hv-item .hv-rotate-img-left {
+  -moz-transform: scale(1) rotate(0deg);
+  -ms-transform: scale(1) rotate(0deg);
+  -webkit-transform: scale(1) rotate(0deg);
+  transform: scale(1) rotate(0deg);
+  -moz-transition: transform 0.3s ease-in-out;
+  -o-transition: transform 0.3s ease-in-out;
+  -webkit-transition: transform 0.3s ease-in-out;
+  transition: transform 0.3s ease-in-out;
+}
+.hv-item:hover .hv-rotate-img-left {
+  -moz-transform: scale(1.1) rotate(-5deg);
+  -ms-transform: scale(1.1) rotate(-5deg);
+  -webkit-transform: scale(1.1) rotate(-5deg);
+  transform: scale(1.1) rotate(-5deg);
+}
+.hv-item .hv-height-x {
+  height: 0;
+  visibility: hidden;
+  -moz-transition: height 0.3s ease-in-out;
+  -o-transition: height 0.3s ease-in-out;
+  -webkit-transition: height 0.3s ease-in-out;
+  transition: height 0.3s ease-in-out;
+}
+.hv-item:hover .hv-height-x {
+  visibility: visible;
+  height: 100%;
+}
+.hv-item .hv-width-x {
+  width: 0;
+  visibility: hidden;
+  -moz-transition: width 0.3s ease-in-out;
+  -o-transition: width 0.3s ease-in-out;
+  -webkit-transition: width 0.3s ease-in-out;
+  transition: width 0.3s ease-in-out;
+}
+.hv-item:hover .hv-width-x {
+  visibility: visible;
+  width: 100%;
 }

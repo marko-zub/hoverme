@@ -1,0 +1,39 @@
+// Style #1
+.hv-item {
+    &.hv-hover-1 {
+        .hv-title {
+            @include transform(translate(0, -80px));
+
+            visibility: hidden;
+        }
+
+        .hv-icons {
+            @include transform(translate(0, 80px));
+
+            visibility: hidden;
+        }
+
+        &:hover {
+            .hv-icons {
+                @include transform(translate(0, 0));
+
+                visibility: visible;
+                opacity: 1;
+            }
+
+            .hv-title {
+                @include transform(translate(0, 0));
+
+                visibility: visible;
+                opacity: 1;
+            }
+
+            .hv-overlay {
+                @include transition(all #{$anim_time} #{$anim_curve});
+
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+}

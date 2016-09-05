@@ -1,0 +1,16 @@
+.credits {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    padding: 2px 15px;
+    background-color: #333;
+    width: 100%;
+    z-index: 3;
+
+    a {
+        color: #fff;
+        font-size: 13px;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+}

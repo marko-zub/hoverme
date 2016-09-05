@@ -24,6 +24,8 @@ body {
     }
 }
 
+
+// List
 .hv-grid-list {
     font-size: 0;
     overflow: hidden;
@@ -31,103 +33,72 @@ body {
     .hv-item {
         padding: 20px;
         display: inline-block;
-
-        // Hover Styles
-        &.hv-hover-1 {
-            .title {
-                @include transform(translate(0, -50px));
-            }
-
-            .icons {
-                @include transform(translate(0, 50px));
-            }
-
-            &:hover {
-                .icons {
-                    @include transform(translate(0, 0));
-                }
-
-                .title {
-                    @include transform(translate(0, 0));
-                }
-            }
-        }
-
-        .hv-item-inner {
-            position: relative;
-            overflow: hidden;
-
-            &:hover {
-                .hv-icons {
-                    opacity: 1;
-                }
-
-                .hv-title {
-                    opacity: 1;
-                }
-
-                .hv-overlay {
-                    @include transition(all #{$anim_time} #{$anim_curve});
-
-                    opacity: 1;
-                    visibility: visible;
-                }
-            }
-        }
-
-        .hv-title {
-            @include transition(all #{$anim_time} #{$anim_curve});
-
-            position: absolute;
-            color: #fff;
-            top: 0;
-            left: 0;
-            margin: 20px 15px;
-            font-size: 25px;
-            opacity: 0;
-            z-index: 10;
-        }
-
-        .hv-content {
-            @include transition(all #{$anim_time} #{$anim_curve});
-            z-index: 10;
-        }
-
-        .hv-img-wrap {
-          position: relative;
-          overflow: hidden;
-          z-index: 1;
-        }
-
-        .hv-icons {
-            position: absolute;
-            color: #fff;
-            bottom: 0;
-            left: 0;
-            margin: 15px 15px;
-            font-size: 25px;
-            opacity: 0;
-            font-size: 12px;
-            color: #fff;
-            z-index: 10;
-
-            @include transition(all #{$anim_time} #{$anim_curve});
-
-            span {
-                margin: 0 10px 0 0;
-            }
-
-            i {
-                font-size: 16px;
-                margin: 0 4px 0 0;
-            }
-        }
-
-        .hv-overlay {
-          z-index: 3;
-        }
     }
 }
+
+
+.hv-item {
+    padding: 20px;
+    display: inline-block;
+
+    .hv-item-inner {
+        position: relative;
+        overflow: hidden;
+    }
+
+    .hv-title {
+        @include transition(all #{$anim_time} #{$anim_curve});
+
+        position: absolute;
+        color: #fff;
+        top: 0;
+        left: 0;
+        margin: 20px 15px;
+        font-size: 25px;
+        opacity: 0;
+        z-index: 10;
+    }
+
+    .hv-content {
+        @include transition(all #{$anim_time} #{$anim_curve});
+        z-index: 10;
+    }
+
+    .hv-img-wrap {
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+    }
+
+    .hv-icons {
+        position: absolute;
+        color: #fff;
+        bottom: 0;
+        left: 0;
+        margin: 15px 15px;
+        font-size: 25px;
+        opacity: 0;
+        font-size: 12px;
+        color: #fff;
+        z-index: 10;
+
+        @include transition(all #{$anim_time} #{$anim_curve});
+
+        span {
+            margin: 0 10px 0 0;
+        }
+
+        i {
+            font-size: 16px;
+            margin: 0 4px 0 0;
+        }
+    }
+
+    .hv-overlay {
+      z-index: 3;
+    }
+}
+
 
 .hv-overlay {
     position: absolute;
@@ -140,22 +111,4 @@ body {
     visibility: hidden;
 
     @include transition(all #{$anim_time} #{$anim_curve});
-}
-
-
-.credits {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    padding: 2px 15px;
-    background-color: #333;
-    width: 100%;
-    z-index: 3;
-
-    a {
-        color: #fff;
-        font-size: 13px;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
 }
